@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f6" />
+  <title>Our Little Forever</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="lock-screen" id="lockScreen" aria-label="Passcode screen">
+    <div class="lock-decoration left" aria-hidden="true">♥</div>
+    <div class="lock-decoration right" aria-hidden="true">♥</div>
+    <div class="lock-card" id="passcodeCard">
+      <p class="lock-kicker">a little surprise</p>
+      <h2>For your eyes only</h2>
+      <p class="lock-copy">Enter our special passcode</p>
+
+      <div class="passcode-dots" id="passcodeDots" aria-label="Passcode digits">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <p class="lock-error" id="lockError" role="alert"></p>
+
+      <div class="keypad" id="keypad">
+        <button type="button" data-digit="1">1</button>
+        <button type="button" data-digit="2">2</button>
+        <button type="button" data-digit="3">3</button>
+        <button type="button" data-digit="4">4</button>
+        <button type="button" data-digit="5">5</button>
+        <button type="button" data-digit="6">6</button>
+        <button type="button" data-digit="7">7</button>
+        <button type="button" data-digit="8">8</button>
+        <button type="button" data-digit="9">9</button>
+        <button type="button" class="keypad-empty" tabindex="-1" aria-hidden="true"></button>
+        <button type="button" data-digit="0">0</button>
+        <button type="button" class="keypad-delete" id="deleteDigit" aria-label="Delete digit">⌫</button>
+      </div>
+    </div>
+
+    <div class="second-screen" id="secondScreen" aria-hidden="true">
+      <div class="proposal-card" id="proposalCard" aria-label="Special question">
+        <h2>I have made something special for you.<br /><span>Do you want to see it?</span></h2>
+        <img src="assets/2.jpg" alt="Cute bears holding hearts" />
+        <div class="proposal-actions">
+          <button type="button" id="yesButton">Yes ♡</button>
+          <button type="button" id="noButton">No</button>
+        </div>
+      </div>
+
+      <div class="proposal-card no-card" id="noCard" aria-label="No response">
+        <h2>Why did you click no!?</h2>
+        <img src="assets/3.jpg" alt="Cute bears with a sad reaction" />
+        <button type="button" class="try-again-button" id="tryAgainButton">Try again ♡</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ambient" aria-hidden="true">
+    <span class="float-heart h1">♥</span><span class="float-heart h2">♥</span>
+    <span class="float-heart h3">♥</span><span class="float-heart h4">♥</span>
+  </div>
+
+  <main class="card">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Home">
+        <span class="brand-mark">♥</span>
+        <span>Happy Anniversary To The Most Beautiful Babu</span>
+      </a>
+      <button class="music-button" id="musicButton" type="button" aria-label="Play music">
+        <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span id="musicLabel">play our song</span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> happily ever after <span></span></p>
+        <h1>To the love of<br />my <em>life</em></h1>
+        <p class="intro">Every day with you feels like<br />my favorite page of a story.</p>
+
+        <button class="primary-button" id="loveButton" type="button">
+          <span>open my letter</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+
+      <div class="photo-wrap">
+        <div class="tape tape-top"></div>
+        <div class="photo">
+          <img src="assets/5.jpg" alt="Our favorite memory" />
+          <div class="photo-caption">
+            <span>our favorite memory</span>
+            <span>∞</span>
+          </div>
+        </div>
+        <div class="tape tape-bottom"></div>
+        <span class="scribble">you & me ♡</span>
+      </div>
+    </section>
+
+    <footer>
+      <span>est. november 25, 2021</span>
+      <div class="footer-hearts" aria-hidden="true"><i>♥</i><i>♥</i><i>♥</i></div>
+    </footer>
+  </main>
+
+  <dialog id="letterDialog">
+    <button class="close-button" id="closeLetter" type="button" aria-label="Close letter">×</button>
+    <div class="letter-kicker">a little note for you</div>
+    <h2>My dearest love,</h2>
+    <p>Happy anniversary, Babu.<br />Jevha mi maghe maghe aplya 5 varshyan kade pahto na tevha mala realize hota ki kiti brighter, softer ani anandi ahe maz jagh tuzyasobat astana. Tu fakt mazi girlfriend nahi ahes — you’re my favorite person, my safe place, and the best part of every single day.</p>
+    <p>I love the way we laugh over the little things, how you understand me without needing a single word, and how easy it is to just be myself when I'm with you. Thank you for your patience, your kindness, and for choosing me every day.</p>
+    <p>Here is to us, to the memories we’ve already made, and to all the adventures waiting for us around the corner. I love you more than yesterday, and less than tomorrow. Happy anniversary Bala.</p>
+    <p class="signature">Forever yours <span>♡</span></p>
+  </dialog>
+
+  <audio id="audio" loop preload="metadata">
+    <source src="assets/lag-ja-gale.mp3" type="audio/mpeg" />
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
